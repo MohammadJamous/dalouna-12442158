@@ -340,6 +340,17 @@ color: #fff;
 }
 
 
+.preview-btn {
+  margin-top: 1rem;
+}
+
+.preview-label {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--brand);
+}
+
 .BG {
 position:absolute;
 width:100%;
