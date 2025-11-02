@@ -1,191 +1,413 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <!-- 
-      css/style.css
-      Student Name: Mohammad Jamous
-      Student ID: 12442158
-    -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="assignment-token" content="eb53f3199421" />
-    <meta name="student-name" content="mohammad_jamous" />
-    <meta name="student-id" content="12442158" />
-    <title>Dalouna Restaurant</title>
+/* 
+css/style.css
+Student Name: Mohammad Jamous
+Student Id: 12442158
+*/
+
+:root {
+        --bg: #faf7f2;
+        --text: #2d2d2d;
+        --muted: #6b6b6b;
+        --brand: #216869;
+        --brand-2: #49a078;
+        --card: #ffffff;
+        --border: #e9e3db;
+        --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        --radius: 16px;
+        --transition: 0.3s ease;
+}
 
 
-    <!-- Google Font Rubik -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+body {
+        margin: 0;
+        font-family: "Rubik", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+}
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-  </head>
+a {
+        color: #49a078;
+        text-decoration: none;
+}
 
-  <body class="class-12442158">
+img { max-width: 100%; display: block; }
 
-    <!-- Header -->
-    <header class="site-header">
-      <nav class="container nav">
-        <h1 class="logo">Dalouna</h1>
-        <div class="menu-toggle">&#9776;</div>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#hours">Hours</a></li>
-          <li><a href="#find-us">Find Us</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+.container {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 15px;
+}
 
-    <!-- Hero -->
-    <main id="home">
-      <section class="hero">
-        <div class=" hero-content">
-          <div class="badge">Mediterranean • Palestinian Kitchen</div>
-          <h1>Welcome to Dalouna</h1>
-          <p>Homestyle flavors, fresh ingredients, and warm hospitality. Join us for grilled specialties, mezze, and seasonal dishes inspired by the Levant.</p>
-          <a href="#menu" class="btn">View Menu</a>
-        </div>
-      </section>
+/* HEADER */
+.site-header {
+        background: var(--card);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+}
 
-    <!-- About -->
-    <section id="about">
-      <div class="container grid-2">
-        <article class="card1">
-          <h3>About Us</h3>
-          <p>Dalouna is a neighborhood restaurant celebrating family recipes and local produce. Our kitchen brings together classic Palestinian dishes and modern twists.</p>
-          <p  class="description">Vegetarian & vegan options • Halal meats • Dine-in & takeaway</p>
-          <div class="tags">
-            <span class="tag">Fresh Bread Daily</span>
-            <span class="tag">Wood-Fired Grill</span>
-            <span class="tag">House Pickles</span>
-          </div>
-        </article>
-        <article class="card1">
-          <h3>Chef's Note</h3>
-          <p><em>"We cook the food we love to serve at home—simple, bright, and generous."</em></p>
-          <p class="description">Ask us about today’s seasonal specials.</p>
-        </article>
-      </div>
-    </section>
+.nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .0rem 0;
+}
 
-    <!-- Menu -->
-    <section id="menu" class="section-alt">
-      <div class="container">
-        <h2 class="section-title">Menu Highlights</h2>
-        <div class="grid grid-3">
+.logo {
+        font-size: 30px;
+        font-weight: 800;
+        color: var(--brand);
+}
 
-          <article class="card2">
-            <h3>Mezze</h3>
-            <div class="menu-item"><div><h4>Hummus Bil Tahina</h4><p class="description">chickpeas, tahini, lemon</p></div><span class="price">$6</span></div>
-            <div class="menu-item"><div><h4>Mutabbal (Baba Ghanoush)</h4><p class="description">smoky eggplant, pomegranate</p></div><span class="price">$7</span></div>
-            <div class="menu-item"><div><h4>Falafel Plate</h4><p class="description">herb falafel, tahini, pickles</p></div><span class="price">$9</span></div>
-          </article>
+.nav-links {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        padding: 0;
+        margin: 0;
+}
 
-          <article class="card2">
-            <h3>Mains</h3>
-            <div class="menu-item"><div><h4>Mixed Grill</h4><p class="description">kebab, shish tawook, kofta</p></div><span class="price">$18</span></div>
-            <div class="menu-item"><div><h4>Musakhan Wrap</h4><p class="description">sumac chicken, onions</p></div><span class="price">$12</span></div>
-            <div class="menu-item"><div><h4>Maqluba</h4><p class="description">layered rice, aubergine</p></div><span class="price">$16</span></div>
-          </article>
+.nav-links a {
+        font-weight: 800;
+        color: var(--brand);
+        text-decoration: none;
+        transition: var(--transition);
+}
 
-          <article class="card2">
-            <h3>Drinks & Sweets</h3>
-            <div class="menu-item"><div><h4>Mint Lemonade</h4><p class="description">fresh mint, lemon</p></div><span class="price">$4</span></div>
-            <div class="menu-item"><div><h4>Cardamom Tea</h4><p class="description">black tea, cardamom pods</p></div><span class="price">$3</span></div>
-            <div class="menu-item"><div><h4>Knafeh Nabulsi</h4><p class="description">cheese pastry, orange blossom</p></div><span class="price">$7</span></div>
-          </article>
-        </div>
-            <p class="note">* Prices are exclusive taxes.</p>
-      </div>
-    </section>
+.nav-links a:hover {
+        color: var(--brand-2);
+}
 
-<!-- Hours & Contact -->   
-  <section id="hours">
-      <div class="container grid-2">
-        <article class="card1">
-          <h3>Hours</h3>
-          <table class="hours-table">
-            <tr><td>Mon–Thu</td><td>12:00 – 22:00</td></tr>
-            <tr><td>Fri</td><td>12:00 – 23:00</td></tr>
-            <tr><td>Sat</td><td>10:00 – 23:00</td></tr>
-            <tr><td>Sun</td><td>10:00 – 21:00</td></tr>
-          <tr></tr>
-          </table>
-        </article>
+/* HERO */
+.hero {
+        position: relative;
+        height: 80vh;
+        background: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)),
+        url('../images/bg.jpg') center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+}
 
-        <article class="card1" id="contact">
-          <h3>Reserve a Table</h3>
-          <p>Call <strong>(+970) 599-000-000</strong> or email <a href="mailto:hello@dalouna.example">hello@dalouna.example</a></p>
-          <p>Walk-ins welcome • Groups & events by request.</p>
-        </article>
-      </div>
-    </section>
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
 
-    <!-- Find Us -->
-    <section id="find-us" class="container">
-      <div class="container grid-2">
-        <article class="card1">
-          <h3>Find Us</h3>
-          <p>Old City, Nablus – Al-Qaryoun Street 12</p>
-          <p>Parking nearby • Accessible entrance</p>
-        </article>
-        <div class="map-box"></div>
-        <tr></tr>
-      </div>
-    </section>
-<tr></tr>
-<!-- Footer -->
-  <footer class="site-footer site-12442158">
-    <div class="container">
-      <p>
-        2025 © Dalouna Restaurant • 
-        Made with <i class="fa-solid fa-heart"></i> by 
-        <span class="info">
-          <strong class="name">Mohammad Jamous</strong> – 
-          <span class="student-id">12442158</span>
-        </span>
-      </p>
+.badge {
+background: var(--brand-2);
+padding: .4rem 1rem;
+border-radius: 50px;
+font-weight:600;
+color: #23553e;
+display:inline-block;
+margin-bottom: .8rem;
+font-weight: bold;
+}
 
-      <!-- GitHub Button -->
-      <a href="https://github.com/MohammadJamous" target="_blank" class="Btn">
-  <span class="svgContainer">
-    <svg viewBox="0 0 16 16" width="22" height="22" fill="white" aria-hidden="true">
-      <path d="M8 0C3.58 0 0 3.58 0 8a8 
-      8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38
-      0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94
-      -.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53
-      .63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
-      .07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
-      0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-      0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 
-      2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82
-      1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 
-      1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 
-      8 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-    </svg>
-  </span>
-</a>
+.hero h1 { font-size: 3.5rem;
+margin-bottom: 1rem; 
+font-weight: 700; 
+}
+
+.hero p { font-size: 1.2rem;
+margin-bottom: 2rem;
+opacity: 0.95;
+}
+
+.btn {
+background: #216869;
+color: #fff;
+padding: .8rem 2rem;
+border-radius: 50px;
+font-weight: 600;
+transition: var(--transition);
+display:inline-block;
+}
+
+.btn:hover {
+background: var(--brand-2);
+transform: translateY(-2px);
+}
+
+/* SECTIONS */
+section { padding: 4rem 0; background:var(--bg); }
+
+.section-alt {
+background: var(--bg);
+}
+
+.section-title {
+font-size: 2rem;
+color: var(--text);
+margin-bottom: 2rem;
+font-weight: 600;
+}
+.grid-2, .grid-3 { display: grid; gap: 2rem; }
+.grid-2 { grid-template-columns: repeat(2,1fr); }
+.grid-3 { grid-template-columns: repeat(3,1fr); }
+
+.card1 {
+background: var(--card);
+padding: 2rem;
+border-radius: var(--radius);
+border: 1px solid var(--border);
+box-shadow: var(--shadow);
+}
+
+.card1 h3 {
+margin-top: -10px;
+font-size: 1.9rem;
+color: var(--text);
+margin-bottom: 2rem;
+font-weight: 600;
+height: 40px;
+}
 
 
-    <!-- Back to Top Button -->
-    <a href="#home" class="Btn">
-  <span class="svgContainer">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-    <path d="M12 4l-8 8h5v8h6v-8h5z"/>
-    </svg>
-  </span>
-</a>
+.tag {
+display: inline-block;
+background: #413f3f07; 
+color: #000000; 
+padding: 0.3rem 0.8rem;
+border-radius: 20px;
+font-size: 0.85rem;
+margin: 0.5rem 0.5rem 0 0;
+border: 1px solid #67656526; 
+font-weight: 300;
+}
 
-    
-    </p>
-    </div>
-  </footer>
+/* MENU CARDS */
+.card2{
+background: #ffffff;
+padding: 2rem;
+border-radius: var(--radius);
+box-shadow: var(--shadow);
+border: 1px solid var(--border);
+position: relative;
+width: 310px;
+height: 350px;
+}
+
+.card2 h3 {
+margin-top: -10px;
+font-size: 1.9rem;
+color: var(--text);
+margin-bottom: 2rem;
+font-weight: 600;
+height: 40px;
+}
+
+.menu-item {
+display:flex;
+justify-content:space-between;
+align-items: flex-start;
+border-bottom: 1px dotted var(--border);
+margin-bottom:.6rem;
+padding-bottom:.4rem;
+}
+
+.menu-item:last-child {
+border-bottom: none;
+margin-bottom: 0;
+padding-bottom: 0;
+}
+
+.menu-item h4 {
+font-weight: 600;
+color: var(--text);
+margin-bottom: 0.15rem;
+}
+
+.price { color:var(--brand-2);
+font-weight:bold;white-space: nowrap;
+}
+
+.description {
+margin-top: 0;
+font-size: 0.9rem;
+color: var(--muted);
+line-height: 1.2;
+}
+
+.note {
+font-size: 0.85rem;
+color: var(--muted);
+font-style: italic;
+margin-top: 1.5rem;
+}
+
+/* HOURS TABLE */
+.hours-table { width:100%;
+border-collapse:collapse;
+}
+
+.hours-table td { padding: 0.8rem 0;
+border-bottom:2px dashed #CCC;
+line-height: 200%;
+}  
+.hours-table td:first-child { font-weight:600; 
+width:40%;
+color: var(--text); 
+}
+.hours-table td:last-child {
+text-align: right;
+}
+.hours-table tr:last-child td {
+border-bottom: none;
+}
+
+/* MAP */
+.map-box {
+height: 300px;
+border-radius: 12px;
+background:url('../images/map.png') center/cover no-repeat;
+background-size:cover;
+background-position: center;
+margin-top: 1rem;
+box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+.site-footer {
+background-color: #f4f3eb;
+text-align:center;
+padding: 2.5rem 0;
+font-size: 0.95rem;
+}
+
+.site-footer .name,
+.site-footer .student-id {
+color:var(--brand-2);
+}
+.site-footer a {
+color: rgb(4, 1, 1);
+transition: var(--transition);
+}
+
+.site-footer a:hover {
+color: var(--brand-2);
+}
+
+.site-footer .fa-heart {
+color: #ff6b6b;
+}
+
+.info .name  {
+color: #49a078;
+}
+
+.info .student-id {
+color: #49a078;
+}
+
+/* (GitHub - Back To Top) */
+.Btn {
+width: 48px;
+height: 48px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+background: var(--brand);
+border-radius: 8px;
+border: none;
+position: relative;
+overflow: hidden;
+transition: 0.3s;
+}
+
+.Btn:hover {
+background: var(--brand-2);
+transform: translateY(-2px);
+}
+
+.svgContainer {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.svgContainer svg,
+.svgContainer i {
+font-size: 1.3rem;
+color: #fff;
+}
 
 
-  </body>
-  </html>
+.BG {
+position:absolute;
+width:100%;
+height:100%;
+background:#181818;
+border-radius:8px;
+z-index:-1;
+transition:.3s;
+}
+
+.Btn:hover .svgContainer {
+background:#aaaaaa41;
+backdrop-filter:blur(5px);
+}
+.Btn:hover .BG { 
+transform:rotate(35deg);
+transform-origin:bottom;
+}
 
 
+@media(max-width:1024px){
+.grid-2,.grid-3{
+grid-template-columns:1fr;
+}
+}
+
+@media (max-width: 768px) {
+  #find.flex {
+    flex-direction: column;
+  }
+  
+  .map-box {
+    height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--card);
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    width: 150px;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    padding: 1rem;
+  }
+
+  .nav-links li {
+    margin-bottom: 1rem;
+  }
+
+  .nav-links li:last-child {
+    margin-bottom: 0;
+  }
+
+  .menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--brand);
+  }
+}
