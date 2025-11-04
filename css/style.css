@@ -404,6 +404,37 @@ transform-origin:bottom;
   .map-box {
     height: 200px;
   }
+  .nav {
+    flex-direction: column; 
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 12px;
+    padding: 0;
+  }
+
+  .nav-links li {
+    margin-bottom: 0;
+  }
+
+  .h11, .h111, .h1111 {
+    grid-template-columns: 1fr;
+  }
+
+  .map-box {
+    height: 220px;
+  }
+
 }
 
 @media (max-width: 768px) {
