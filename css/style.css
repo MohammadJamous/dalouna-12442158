@@ -35,7 +35,7 @@ img { max-width: 100%; display: block; }
 
 .container {
 width: 90%;
-max-width: 1200px;
+max-width: 90%;
 margin: 0 auto;
 padding: 0 15px;
 }
@@ -416,3 +416,4 @@ grid-template-columns:1fr;
     margin-bottom: 0;
   }
 }
+
